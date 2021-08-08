@@ -1,2 +1,1 @@
-<h1 style="color:green">Hello, World from Docker & Jenknis!</h1>
-<h1 style="color:blue">Hello, World from Docker & Jenknis!</h1>
+<h1 style="color:blue">Welcome to my custom Page!!!</h1>
