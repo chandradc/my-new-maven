@@ -8,12 +8,9 @@ pipeline{
                 bat "mvn clean package"
             }
             post{
-                always{
-                   cleanWs()
-                }
                 success{
                     echo "archiving artifacts ......."
-                    archiveArtifacts artifacts: '**/target/*.war'
+                    archiveArtifacts artifacts: '**/*.war'
                 }
             }
         }
