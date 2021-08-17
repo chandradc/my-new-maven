@@ -5,18 +5,23 @@ pipeline{
         stage("Build"){
             steps{
                 bat "mvn --version"
-                bat "mvn clean install package"
+                bat "mvn clean package"
             }
             post{
                 always{
                    cleanWs()
                 }
                 success{
-                    echo "========Build executed successfully========"
+                    echo "archiving artifacts ......."
+                    archiveArtifacts artifacts: '**/target/*.war'
                 }
-                failure{
-                    echo "========Build execution failed========"
-                }
+            }
+        }
+        stage("Deploy"){
+            steps{
+               
+                 echo "Deploying...."
+
             }
         }
     }
