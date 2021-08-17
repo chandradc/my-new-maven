@@ -1,9 +1,9 @@
 pipeline{
     agent {
 
-     docker{
+     docker {
         image "maven"
-        label "docker"
+    
     }
     }
 
