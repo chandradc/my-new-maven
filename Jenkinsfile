@@ -17,10 +17,11 @@ pipeline{
                 }
             }
         }
-        stage("Deploy"){
+        stage("Deploy to staging"){
             steps{
                
                  echo "Deploying...."
+                 build job: 'deploy-war'
 
             }
         }
