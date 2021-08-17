@@ -10,7 +10,7 @@ pipeline{
             post{
                 success{
                     echo "archiving artifacts ......."
-                    archiveArtifacts artifacts: '**/target/*.war'
+                    archiveArtifacts artifacts: '**/*.war'
                 }
                 failure{
                     echo "========Build execution failed========"
