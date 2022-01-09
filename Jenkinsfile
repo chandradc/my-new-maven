@@ -27,6 +27,14 @@ pipeline{
                  build job: 'deploy-war'
 
             }
+            post{
+                success{
+                    echo "Code deployed to tomcat successfully"
+                }
+                failure{
+                    echo "Deploy to staging failed"
+                }
+            }
         }
     }
     
