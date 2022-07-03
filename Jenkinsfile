@@ -24,7 +24,7 @@ pipeline{
                 }
                
                  echo "Deploying...."
-                 build job: 'deploy-war'
+                 build job: 'MyTomcatDeployment'
 
             }
             post{
@@ -37,5 +37,3 @@ pipeline{
             }
         }
     }
-    
-}
