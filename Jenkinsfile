@@ -24,7 +24,7 @@ pipeline{
                 }
                
                  echo "Deploying...."
-                 build job: 'MyTomcatDeployment'
+                 build job: '0724DeploytoTomcat'
 
             }
             post{
